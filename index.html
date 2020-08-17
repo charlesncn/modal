@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    </head>
+<body>
+    <div class="home">
+
+        <div class="header"><h1>welcome to <span> Lorem Ipsum</span></h1>
+                <h3>new normalCovid Enguagement</h3>
+            </div>
+        <div class="text">
+            
+
+            <div class="textHolder">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quos, debitis commodi. Expedita aspernatur 
+                libero asperiores tenetur suscipit aut ut voluptatum. 
+                Aperiam voluptates fugit modi repellendus tenetur iure 
+                eius odio nulla!</p><button onclick="document.getElementById('modal-wrapper').style.display='block'" style="position: relative; top: 60%; left: 0; right: 0;">make reservation</button>
+            </div>
+
+            <div class="textHolder">
+                <h3>slots remaining</h3>
+                <span>56</span><br>
+                <p">Quos, debitis commodi. Expedita aspernatur</p>
+            </div>
+
+        </div>
+        <div class="links">
+        <ul>
+            <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+        </ul>
+
+      </div>  
+
+    </div>
+             <div id="modal-wrapper" class="modal">
+            <div class="container">
+        <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close form">&times;</span>
+                <img src="bg5.jpg" class="avtr">
+                <h2 style="text-align: center;">Seat Reservation Form</h2>
+            </div>
+
+                <input type="text" placeholder="Enter name" name="uname">
+                <select class="district" name="Select District">
+                    <option value="0">--Select District--</option>
+                    <option value="1">Githembe</option>
+                    <option value="2">Jamuhuri</option>
+                    <option value="3">Lenana</option>
+                    <option value="4">Ng'ando</option>
+                    <option value="5">Suna</option>
+                </select>
+                <input type="email" placeholder="Enter email" name="uemail">
+                <input type="email" placeholder="Confirm email" name="uconfirm">
+                <button type="submit" class="btnsubmit">submit</button>
+
+            </div>
+        
+        </form>
+    </div>
+
+    <script>
+        var modal = document.getElementById('modal-wrapper');
+        window.onclick = function(event){
+            if(event.target == modal){
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
